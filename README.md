@@ -19,7 +19,7 @@ Welcome to the Shield Corporation website repository! This project represents a 
 1. Clone this repository:
 
 ```
-git clone https://github.com/jpcarvalho23/Shield.git
+git clone https://github.com/jpcarvalhodev/Shield.git
 ```
 
 2. Navigate into the project directory:
