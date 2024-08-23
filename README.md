@@ -19,13 +19,13 @@ Welcome to the Shield Corporation website repository! This project represents a 
 1. Clone this repository:
 
 ```
-git clone https://github.com/jpcarvalhodev/Shield.git
+git clone https://github.com/jpcarvalhodev/shield.git
 ```
 
 2. Navigate into the project directory:
 
 ```
-cd Shield
+cd shield
 ```
 
 3. Open the `index.html` file in your web browser.
