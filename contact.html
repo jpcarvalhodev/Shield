@@ -14,7 +14,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -84,8 +86,8 @@
                   <i class="bx bx-map"></i>
                   <h3>Nosso Endereço</h3>
                   <p>Rua Cidade de Bolama 13A<br>
-                     Lisboa PT<br>
-                     1800-079</p>
+                    Lisboa PT<br>
+                    1800-079</p>
                 </div>
               </div>
               <div class="col-md-6">
@@ -107,7 +109,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form id="contact-form" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" required>
@@ -115,17 +117,13 @@
                 <div class="col-md-6 form-group mt-3 mt-md-0">
                   <input type="email" class="form-control" name="email" id="email" placeholder="Seu e-mail" required>
                 </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
-              </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Mensagem" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="loading">Carregando</div>
+                <div class="error-message">Erro ao enviar mensagem, tente novamente.</div>
+                <div class="sent-message">Mensagem enviada!</div>
               </div>
               <div class="text-center"><button type="submit">Enviar mensagem</button></div>
             </form>
@@ -204,7 +202,8 @@
     </div>
   </footer>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -218,6 +217,34 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("QVeGHgb6sFoUG7dG9");
+    })();
+  </script>
+
+  <!-- EmailJS Form -->
+  <script type="text/javascript">
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      document.querySelector('.loading').style.display = 'block';
+
+      emailjs.sendForm('service_rgyxam3', 'template_k5jarzo', this)
+        .then(function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+          document.querySelector('.loading').style.display = 'none';
+          document.querySelector('.sent-message').style.display = 'block';
+        }, function (error) {
+          console.log('FAILED...', error);
+          document.querySelector('.loading').style.display = 'none';
+          document.querySelector('.error-message').style.display = 'block';
+        });
+    });
+  </script>
 
 </body>
 
