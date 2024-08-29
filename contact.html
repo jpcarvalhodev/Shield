@@ -109,7 +109,7 @@
           </div>
 
           <div class="col-lg-6">
-            <form id="contact-form" role="form" class="php-email-form">
+            <form id="contact-form" action="#" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" required>
@@ -233,7 +233,7 @@
 
       document.querySelector('.loading').style.display = 'block';
 
-      emailjs.sendForm('service_rgyxam3', 'template_k5jarzo', this)
+      emailjs.sendForm('service_rgyxam3', 'template_k5jarzo', '#contact-form')
         .then(function (response) {
           console.log('SUCCESS!', response.status, response.text);
           document.querySelector('.loading').style.display = 'none';
