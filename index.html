@@ -61,7 +61,7 @@
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
-        <a href="index.html"><img src="../Site Shield/assets/Images/Shield Logo.png" alt="Logo Shield" class="img-fluid"></a>
+        <a href="index.html"><img src="../assets/Images/Shield Logo.png" alt="Logo Shield" class="img-fluid"></a>
       </div>
 
       <nav id="navbar" class="navbar">
@@ -72,16 +72,15 @@
           <li><a href="contact.html">Contato</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+      </nav>
 
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex justify-cntent-center align-items-center">
     <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
-      <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Bem-vindo a <span>Shield</span></h2>
@@ -89,7 +88,6 @@
         </div>
       </div>
 
-      <!-- Slide 2 -->
       <div class="carousel-item">
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">Serviços de Alta Qualidade</h2>
@@ -106,7 +104,7 @@
       </a>
 
     </div>
-  </section><!-- End Hero -->
+  </section>
 
   <main id="main">
 
@@ -146,8 +144,8 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
-  </main><!-- End #main -->
+    </section>
+  </main>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
@@ -175,11 +173,11 @@
           <div class="col footer-links">
             <h4>Links Úteis</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="../Site Shield/index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../Site Shield/about.html">Sobre</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../Site Shield/services.html">Serviços</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../Site Shield/termsOfService.html">Termos de Uso</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="../Site Shield/privacyPolicy.html">Politica de Privacidade</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="./index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="./about.html">Sobre</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="./services.html">Serviços</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="./termsOfService.html">Termos de Uso</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="./privacyPolicy.html">Politica de Privacidade</a></li>
             </ul>
           </div>
 
@@ -216,7 +214,7 @@
       <div class="credits">
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -230,9 +228,9 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   
+  <!-- Cookie Bar -->
   <div class="cookie-bar" id="cookieBar">
     Nós usamos cookies para melhorar sua experiência no site. Ao continuar navegando, você concorda com o uso de cookies.
     <button onclick="aceitarCookies()">Aceitar</button>
@@ -241,19 +239,16 @@
   <script>
     function aceitarCookies() {
       document.getElementById("cookieBar").style.display = "none";
-      // Define a data de expiração do cookie
-      var umDiaEmMillisegundos = 24 * 60 * 60 * 1000; // Um dia em milissegundos
+      var umDiaEmMillisegundos = 24 * 60 * 60 * 1000;
       var dataExpiracao = new Date();
       dataExpiracao.setTime(dataExpiracao.getTime() + umDiaEmMillisegundos);      
       document.cookie = "cookiesAceitos=true; expires=" + dataExpiracao.toUTCString();
     }
 
     function cookiesAceitos() {
-      // Verifica se o cookie de aceitação existe
       return document.cookie.indexOf("cookiesAceitos=true") !== -1;
     }
 
-    // Verifica se o usuário já aceitou os cookies
     if (cookiesAceitos()) {
       document.getElementById("cookieBar").style.display = "none";
     }
