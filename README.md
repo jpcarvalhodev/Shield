@@ -40,27 +40,6 @@ Once you have opened the website in your browser, you can navigate through the d
 - **Contact:** Includes a form for users to fill out and get in touch with the company.
 - **ToS and Privacy Policy:** Details the company terms of service and privacy policy.
 
-## Folder Structure
-
-```
-|-- assets/
-|   |-- images/
-|   |-- css/
-|   |-- img/
-|   |-- js/
-|   |-- scss/
-|   |-- vendor/
-|-- forms/
-|   |-- Readme.txt
-|   |-- contact.php
-|-- about.html
-|-- contact.html
-|-- index.html
-|-- privacyPolicy.html
-|-- services.html
-|-- termsOfService.html
-```
-
 ## Contribution
 
 Contributions are welcome! If you have any suggestions for improvements or new features, feel free to open an issue!
